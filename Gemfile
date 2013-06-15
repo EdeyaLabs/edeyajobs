@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'haml-rails'
 gem 'rails_admin'
+gem 'figaro'
 
 group :development do
   gem 'sqlite3'
