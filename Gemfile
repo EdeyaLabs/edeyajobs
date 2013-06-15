@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg'
 gem 'haml-rails'
-gem 'activeadmin'
+gem 'rails_admin'
 
 group :development do
   gem 'sqlite3'
@@ -25,3 +25,6 @@ end
 
 gem 'jquery-rails', '2.3.0'
 
+
+
+gem "devise"
