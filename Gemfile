@@ -5,6 +5,7 @@ gem 'pg'
 gem 'haml-rails'
 gem 'rails_admin'
 gem 'figaro'
+gem 'redcarpet'
 
 group :development do
   gem 'sqlite3'
