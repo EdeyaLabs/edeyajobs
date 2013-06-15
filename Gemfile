@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'haml-rails'
 gem 'activeadmin'
+gem 'jquery-ui-rails'
 
 group :development do
   gem 'sqlite3'
