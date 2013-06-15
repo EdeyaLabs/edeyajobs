@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'rails_admin'
 gem 'figaro'
 gem 'redcarpet'
+gem 'friendly_id'
 
 group :development do
   gem 'sqlite3'

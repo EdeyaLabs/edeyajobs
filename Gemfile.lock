@@ -54,6 +54,7 @@ GEM
       rails (>= 3, < 5)
     font-awesome-rails (3.2.0.0)
       railties (>= 3.2, < 5.0)
+    friendly_id (4.0.9)
     haml (4.0.2)
       tilt
     haml-rails (0.4)
@@ -178,6 +179,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   figaro
+  friendly_id
   haml-rails
   jquery-rails (= 2.3.0)
   letter_opener
