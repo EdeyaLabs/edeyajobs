@@ -1,43 +1,11 @@
-#bgoverlay
-%div{ :style => "position: relative; z-index: 110" } 
-  %section.top-section.small-top-section
-    .container
-      .row
-        
-        .logo
-        %h1.main
-          Work with us
-        %h3.header-desc
-          We are a small but perfectly formed creative web agency based in Brighton. We have been making pretty things online since 2006 and are always on the lookout for like-minded people.
-  .container
-    .row
-      .dark-overlay
-        %ul.job-postings
+.container
+  .row
+    .dark-overlay
+      %ul.job-postings
+        - @jobs.each do |j|
           %li
-
-            %h2
-              Ruby on Rails Programmer
+            %h2= j.title
             .job-desc
-              %p
-                Responsibilities range from team "ideation" to hands-on implementation of projects at different levels of the stack as needed. Typical projects involve responsively designed UI, a Rails-based server application, and often some form of asynchronous back-end processing.  The Senior Developer must be willing and able to take on a variety of these tasks over the course of changing projects and office initiatives. Adapt and thrive! 
-          %li
-
-            %h2
-              Senior UI / Visual Designer
-            .job-desc 
-              %p
-                As a Sr. UI Designer, you are involved in working as part of a small team that collaborates with product and engineering to create and execute visual design, making sure every pixel is in its place. Those pixels will be on millions of screens, on a variety of devices (desktop, mobile, tablet), and most of all, helping increase people’s satisfaction.
-              %ul
-                %li
-                  Strong portfolio featuring examples of designs you built
-                %li
-                  Proven ability to build what you design – HTML/CSS/JS libraries knowledge is a must
-                %li
-                  Excellent ability to articulate your design decisions (verbally and written)
-                %li
-                  Very organized and able to manage multiple projects
-
-
-            
-
-
+              - md = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
+              - description = md.render(j.description).html_safe
+              = description
