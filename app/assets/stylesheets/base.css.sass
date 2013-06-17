@@ -1,0 +1,286 @@
+@import "http://fonts.googleapis.com/css?family=Abel"
+.group:before,
+.group:after
+  content: ""
+  display: table
+.group:after
+  clear: both
+.group 
+  zoom: 1
+
+.container
+  width: 640px
+  margin: 0 auto
+
+body
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+  background: #232323
+  color: #fff
+  line-height: 1.6
+  cursor: default
+
+section
+  position: relative
+  z-index: 10
+  text-align: center
+  h4
+    opacity: .4
+    font-weight: 100
+    position: relative
+    top: -3px
+.cell
+  padding: 30px
+.text-left
+  text-align: left
+.text-right
+  text-align: right
+.top-section
+  min-height: 450px
+  margin: 50px 0
+  &.small-top-section
+    min-height: 200px
+#bgoverlay
+  background-image: image-url('bg_pattern_overlay.png')
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  z-index: 1
+  display: block
+#bgStretch
+  position: fixed
+  left: 0
+  top: 0
+  z-index: -9999
+  margin: 0
+  padding: 0
+  height: 800px
+  width: 100%
+  background-image: image-url('bg.jpg')
+  background-repeat: no-repeat
+  background-size: 100%
+  img
+    width: 100%
+.about-section
+  background: #4aa8c7
+  text-align: center
+  overflow: hidden
+.contact-section
+  overflow: hidden
+.cell
+  h3
+    font-size: 24px
+    text-transform: uppercase
+    margin-bottom: 10px
+    font-family: 'Montserrat', sans-serif
+    text-shadow: 3px 3px 0 rgba(0,0,0,.1)
+    letter-spacing: 1px
+    &.header-desc
+      font-weight: lighter
+
+.team-section
+  background: #232323
+  overflow: hidden
+.top-nav
+  margin: 40px 0 80px
+  text-align: center
+  &>a
+    display: inline-block
+    text-transform: uppercase
+    color: #fff
+    padding: 8px 12px
+    border-radius: 3px
+    transition: all .1s ease-in-out
+    margin: 0 25px
+    font-size: 14px
+    font-weight: 700
+    position: relative
+    z-index: 1000
+    &.active
+      background: #fff
+      color: #434343 
+    &:hover
+      background: #fff
+      color: #434343
+.logo
+  width: 388px
+  height: 73px
+  display: inline-block
+  background-image: image-url('logo.png')
+  background-repeat: no-repeat
+  background-position: 0 50%
+  margin-top: 20px
+h1.main
+  border-top: 1px solid rgba(255,255,255,.3)
+  border-bottom: 1px solid rgba(255,255,255,.3)
+  padding: 20px 0
+  font-size: 52px
+  margin: 20px 0
+  display: inline-block
+  /* font-weight: 100
+  text-shadow: 0 1px 2px rgba(0,0,0,.5)
+  font-family: 'Abel', sans-serif
+  letter-spacing: 1px
+  line-height: 1
+h2.desc
+  
+  font-size: 28px
+  text-shadow: 0 1px 2px rgba(0,0,0,.5)
+  font-family: 'Abel', sans-serif
+.block
+  margin: 50px 0
+.tree
+  position: absolute
+  width: 1px
+  height: 100%
+  border-left: 1px solid #fff
+  left: 50%
+  top: 0
+  margin-top: 100px
+  opacity: .4
+  &.tree-eight-col
+    left: 58%
+  .ball
+    width: 20px
+    height: 20px
+    background-color: #fff
+    border-radius: 50%
+    margin-left: -10px
+.dark-overlay
+  padding: 20px
+  background-color: rgba(0,0,0,.7)
+.job-postings
+  h2
+    font-family: "Abel", sans-serif
+    font-size: 30px
+    border-bottom: 1px solid rgba(255,255,255,.2)
+    margin-bottom: 10px
+  & > li
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+
+.job-desc
+  p
+    margin: 0 0 15px 0
+  ul
+    margin-left: 20px
+  li
+    margin-bottom: 10px
+    list-style: circle
+    
+.form
+  fieldset
+    margin: 10px 0
+  input[type=text],
+  input[type=email],
+  textarea
+    opacity: .7
+    border: none
+    padding: 12px
+    font-size: 16px
+    width: 100%
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    outline: none
+    border: 1px solid transparent
+    transition: all .1s ease-in-out
+    &:focus
+      opacity: 1
+    &.error
+      border-color: #f92d2d
+  textarea
+    resize: none
+    min-height: 100px
+
+input.btn-submit
+  padding: 15px 50px
+  background: #f86c3b
+  border: none
+  color: #fff
+  font-size: 16px
+  box-shadow: 0 2px 0 #c0390a
+  cursor: pointer
+  transition: all .1s ease-in-out
+  position: relative
+  &:active
+    background-color: #c0390a
+    top: 1px
+
+.contact-email
+  margin: 15px 0
+  display: block
+  text-decoration: underline
+.project-desc
+  padding: 0 20px
+  h2
+    font-size: 20px
+    font-weight: bold
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) 
+
+  .tree
+    display: none
+  h1.main
+    margin-top: 20px
+    font-size: 40px
+    margin-bottom: 30px
+  #bgStretch
+    background-size: 400%
+    background-position: center 10%
+    height: 600px
+  .block
+    margin: 20px 0
+  .cell
+    padding: 15px
+  .top-nav
+    margin: 10px 0 20px
+    text-align: center
+    a
+      display: block
+  button.btn-submit
+    width: 100%
+  .top-section
+    min-height: 400px
+
+  .logo
+    margin: 10px 0 0
+
+.meta-details
+  margin: 15px 0
+  li
+    display: inline-block
+    font-size: 14px
+    margin-right: 10px
+    opacity: .7
+
+
+@media only screen and (max-width: 479px)
+  .logo
+    width: 70%
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    background-size: 100%
+  h1.main
+    font-size: 32px
+  h2.desc
+    font-size: 18px
+.form-message
+  padding: 10px
+  &.success
+    font-size: 2.8em
+    font-family: 'Montserrat', sans-serif
+    line-height: 1
+    font-weight: bold
+    text-shadow: 0 -1px 1px rgba(0,0,0,.2)
+    
+.dark-overlay
+  padding: 20px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2)
+
