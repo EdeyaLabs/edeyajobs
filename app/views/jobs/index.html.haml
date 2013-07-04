@@ -3,14 +3,9 @@
     .dark-overlay
       .job-postings
         - @jobs.each do |j|
-          
-          %h2= link_to j.title, jobs_path(j)
+
+          %h2= link_to j.title, job_path(j)
           .job-desc
             - md = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
             - description = md.render(j.summary).html_safe
             = description
-            .share-actions
-              %a.twitter-share-button{"data-count" => "none", "data-size" => "large", "data-via" => "edeyalabs" , "data-text" => "#{j.title}", "data-url" => "http://www.edeyalabs.com/jobs", :href => "https://twitter.com/share"}
-                Tweet
-            
-              
