@@ -4,7 +4,7 @@
       %ul.job-postings
         - @jobs.each do |j|
           %li
-            %h2= j.title
+            %h2= link_to j.title, jobs_path(j)
             .job-desc
               - md = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
               - description = md.render(j.summary).html_safe
