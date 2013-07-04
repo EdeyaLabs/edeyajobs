@@ -26,6 +26,20 @@ strong
 a
   color: #fff
   text-decoration: none
+.btn-rounded
+  background: transparent
+  border-radius: 30px
+  border: 2px solid #fff
+  padding: 7px 15px
+
+.read-more
+  text-align: right
+  padding-top: 10px
+  a
+    opacity: .7
+    &:hover
+      opacity: 1
+
 section
   position: relative
   z-index: 10
@@ -279,6 +293,18 @@ input.btn-submit
     margin-right: 10px
     opacity: .7
 
+.form-message
+  padding: 10px
+  &.success
+    font-size: 2.8em
+    font-family: 'Montserrat', sans-serif
+    line-height: 1
+    font-weight: bold
+    text-shadow: 0 -1px 1px rgba(0,0,0,.2)
+    
+.dark-overlay
+  padding: 20px
+
 
 @media only screen and (max-width: 640px)
   a.logo
@@ -296,17 +322,7 @@ input.btn-submit
     width: 100%
 
 
-.form-message
-  padding: 10px
-  &.success
-    font-size: 2.8em
-    font-family: 'Montserrat', sans-serif
-    line-height: 1
-    font-weight: bold
-    text-shadow: 0 -1px 1px rgba(0,0,0,.2)
-    
-.dark-overlay
-  padding: 20px
+
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2)
 

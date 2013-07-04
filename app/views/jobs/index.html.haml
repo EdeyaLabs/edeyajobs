@@ -9,3 +9,8 @@
             - md = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
             - description = md.render(j.summary).html_safe
             = description
+            .read-more 
+              %a.btn-rounded{ :href => job_path(j) }
+                Read more &rarr;
+              
+
