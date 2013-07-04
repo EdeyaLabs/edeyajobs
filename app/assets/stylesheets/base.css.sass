@@ -19,7 +19,13 @@ body
   color: #fff
   line-height: 1.6
   cursor: default
-
+  padding-bottom: 40px
+  
+strong
+  font-weight: 700
+a
+  color: #fff
+  text-decoration: none
 section
   position: relative
   z-index: 10
@@ -104,10 +110,11 @@ section
     &:hover
       background: #fff
       color: #434343
-.logo
+a.logo
   width: 388px
   height: 73px
-  display: inline-block
+  display: block
+  margin: 0 auto
   background-image: image-url('logo.png')
   background-repeat: no-repeat
   background-position: 0 50%
@@ -154,22 +161,30 @@ h2.desc
 .job-postings
   h2
     font-family: "Abel", sans-serif
-    font-size: 30px
+    font-size: 42px
     border-bottom: 1px solid rgba(255,255,255,.2)
     margin-bottom: 10px
+    text-align: center
   & > li
     margin-bottom: 40px
     &:last-child
       margin-bottom: 0
+.share-actions
+  margin-top: 20px
+  padding-top: 20px
+  border-top: 1px solid rgba(255,255,255,.1)
+  label
 
 .job-desc
+
   p
     margin: 0 0 15px 0
   ul
-    margin-left: 20px
+    padding-left: 30px
+
   li
     margin-bottom: 10px
-    list-style: circle
+    list-style: disc
     
 .form
   fieldset
@@ -248,8 +263,13 @@ input.btn-submit
   .top-section
     min-height: 400px
 
-  .logo
-    margin: 10px 0 0
+  a.logo
+    width: 50%
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    background-size: 100%
+    display: block
+    margin: 0 auto
 
 .meta-details
   margin: 15px 0
@@ -260,16 +280,22 @@ input.btn-submit
     opacity: .7
 
 
-@media only screen and (max-width: 479px)
-  .logo
-    width: 70%
+@media only screen and (max-width: 640px)
+  a.logo
+    width: 50%
     box-sizing: border-box
     -moz-box-sizing: border-box
     background-size: 100%
+    display: block
+    margin: 0 auto
   h1.main
     font-size: 32px
   h2.desc
     font-size: 18px
+  .container
+    width: 100%
+
+
 .form-message
   padding: 10px
   &.success
