@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130615182601) do
+ActiveRecord::Schema.define(:version => 20130704020152) do
 
   create_table "jobs", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130615182601) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "slug"
+    t.text     "summary"
   end
 
   add_index "jobs", ["slug"], :name => "index_jobs_on_slug", :unique => true
@@ -29,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130615182601) do
     t.integer  "item"
     t.string   "table"
     t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 5
+    t.integer  "year",       :limit => 8
     t.datetime "created_at",              :null => false
     t.datetime "updated_at",              :null => false
   end
